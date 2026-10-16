@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Proyectos académicos y actividad pública de Adiel Jose Imaña Castillo.">
+    <title>Proyectos | Adiel Jose Imaña Castillo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/paleta-viva.css">
+    <link rel="stylesheet" href="./css/componentes-vivos.css">
+    <link rel="stylesheet" href="./css/movimiento.css">
+</head>
+<body>
+    <div class="contenedor-pagina">
+        <!-- Permite saltar la navegación al usar teclado o tecnología de asistencia. -->
+        <a href="#main-content" class="saltar-contenido">Saltar al contenido principal</a>
+        <button id="btn-modo" class="boton-modo" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+            <span id="texto-modo">Modo oscuro</span>
+        </button>
+
+        <!-- Identifica al propietario de la página y el área que se está consultando. -->
+        <header id="inicio">
+            <h1>Proyectos destacados</h1>
+            <p class="subtitulo">Adiel Jose Imaña Castillo</p>
+            <p><small>Estudiante de Ingeniería de Sistemas | UCB La Paz</small></p>
+        </header>
+
+        <!-- La misma navegación aparece en todas las páginas del portafolio. -->
+        <nav aria-label="Navegación principal">
+            <h2 class="sr-only">Menú</h2>
+            <button id="btn-menu" class="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span aria-hidden="true">☰</span>
+            </button>
+            <ul id="menu-principal">
+                <li><a href="./index.html">CV principal</a></li>
+                <li><a href="./formacion.html">Formación</a></li>
+                <li><a href="./proyectos.html" aria-current="page">Proyectos</a></li>
+                <li><a href="./multimedia.html">Multimedia</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <!-- El filtro oculta tarjetas que no coinciden, pero conserva su contenido original. -->
+            <section id="proyectos" aria-labelledby="titulo-proyectos">
+                <h2 id="titulo-proyectos">Proyectos académicos</h2>
+                <div class="filtro-proyectos">
+                    <label for="buscar-proyectos">Buscar en proyectos</label>
+                    <input id="buscar-proyectos" type="search" autocomplete="off" aria-controls="lista-proyectos">
+                    <button class="filtro-chip" type="button" data-project-filter="all" aria-pressed="true">Todas</button>
+                    <button class="filtro-chip" type="button" data-project-filter="python" aria-pressed="false">Python</button>
+                    <button class="filtro-chip" type="button" data-project-filter="tkinter" aria-pressed="false">Tkinter</button>
+                    <button class="filtro-chip" type="button" data-project-filter="cpp" aria-pressed="false">C++</button>
+                    <button class="filtro-chip" type="button" data-project-filter="java" aria-pressed="false">Java</button>
+                    <button class="filtro-chip" type="button" data-project-filter="html" aria-pressed="false">HTML</button>
+                    <p id="estado-filtro" role="status" aria-live="polite"></p>
+                </div>
+                <div id="lista-proyectos" class="proyectos-grid">
+                    <article class="project-card" data-project-card data-technologies="python tkinter" data-reveal>
+                        <h3>Sorteo Equitativo</h3>
+                        <p>Proyecto académico para organizar sorteos de equipos y grupos.</p>
+                        <p><strong>Tecnologías:</strong> Python y Tkinter.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>Python</span><span>Tkinter</span></div>
+                        <p><strong>Rol:</strong> Desarrollador.</p>
+                        <p><strong>Resultado:</strong> Aplicación con interfaz gráfica para organizar equipos y realizar sorteos.</p>
+                        <p><strong>Repositorio:</strong> Disponible próximamente.</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="cpp" data-reveal>
+                        <h3>Proyecto académico de programación</h3>
+                        <p>Desarrollo de un proyecto académico utilizando conceptos de programación y estructuras fundamentales.</p>
+                        <p><strong>Tecnología:</strong> C++.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>C++</span></div>
+                        <p><strong>Rol:</strong> Desarrollador.</p>
+                        <p><strong>Resultado:</strong> Aplicación de los conocimientos adquiridos durante la formación universitaria.</p>
+                        <p><strong>Repositorio:</strong> Disponible próximamente.</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="cpp" data-reveal>
+                        <h3>Videojuego de Terrifier</h3>
+                        <p>Videojuego de Terrifier desarrollado con C++.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>C++</span></div>
+                        <p><strong>Repositorio:</strong> Disponible próximamente.</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="java" data-reveal>
+                        <h3>Aplicación del Mundial 2026</h3>
+                        <p>Aplicación Java que muestra datos del Mundial 2026.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>Java</span></div>
+                        <p><strong>Repositorio:</strong> Disponible próximamente.</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="html" data-reveal>
+                        <h3>Sorteador del Mundial</h3>
+                        <p>Sorteador del Mundial desarrollado con HTML.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>HTML</span></div>
+                        <p><strong>Repositorio:</strong> Disponible próximamente.</p>
+                    </article>
+                </div>
+                <aside>
+                    <h3>Intereses de desarrollo</h3>
+                    <p>Me interesa crear proyectos relacionados con programación, tecnología, automatización y soluciones útiles para las personas.</p>
+                </aside>
+            </section>
+
+            <!-- La información se completa con datos recibidos de la API pública, no con ejemplos locales. -->
+            <section id="github" aria-labelledby="titulo-github">
+                <h2 id="titulo-github">Actividad pública en GitHub</h2>
+                <p id="estado-github" role="status" aria-live="polite">Preparando consulta a GitHub...</p>
+                <div id="datos-github"></div>
+                <button id="reintentar-github" type="button" hidden>Reintentar consulta</button>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Adiel Jose Imaña Castillo</strong></p>
+            <p><a href="./index.html#inicio">Volver al CV principal</a></p>
+        </footer>
+    </div>
+    <script src="./js/theme.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/flashcards.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

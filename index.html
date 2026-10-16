@@ -8,16 +8,12 @@
         content="Hoja de vida de Adiel Jose Imaña Castillo, estudiante de Ingeniería de Sistemas en la UCB La Paz.">
     <title>Hoja de Vida | Adiel Jose Imaña Castillo</title>
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/paleta-viva.css">
+    <link rel="stylesheet" href="./css/componentes-vivos.css">
+    <link rel="stylesheet" href="./css/movimiento.css">
 </head>
 
 <body>
-
-    <!-- =========================================
-     BOTÓN MODO CLARO / OSCURO (CON JS)
-     ========================================= -->
-    <button id="btn-modo" class="boton-modo" type="button" aria-label="Cambiar tema de la página">
-        <span id="texto-modo">🌙 Modo oscuro</span>
-    </button>
 
     <div class="contenedor-pagina">
 
@@ -28,48 +24,37 @@
             Saltar al contenido principal
         </a>
 
+        <button id="btn-modo" class="boton-modo" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+            <span id="texto-modo">🌙 Modo oscuro</span>
+        </button>
+
         <!-- =========================================
              ENCABEZADO
              ========================================= -->
-        <header id="inicio">
-
-            <h1>Adiel Jose Imaña Castillo</h1>
-
-            <p class="subtitulo">
-                Estudiante de Ingeniería de Sistemas
-            </p>
-
-            <p>
-                <small>
-                    Estudiante de la carrera de Ingeniería de Sistemas,
-                    actualmente en cuarto semestre | UCB La Paz - Bolivia
-                </small>
-            </p>
-
-            <figure class="foto-perfil">
+        <header id="inicio" class="hero">
+            <div class="hero__copy">
+                <p class="hero__eyebrow">Ingeniería de Sistemas · UCB La Paz</p>
+                <h1>Adiel Jose Imaña Castillo</h1>
+                <p class="hero__role">Estudiante de Ingeniería de Sistemas</p>
+                <p class="hero__summary">
+                    Actualmente en cuarto semestre, con interés en programación y tecnología.
+                    Me interesa el desarrollo de software y el armado y análisis de datos con bases de datos.
+                    Mi objetivo es usar la tecnología para ayudar a las personas.
+                </p>
+                <div class="hero__actions">
+                    <a href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a>
+                    <a href="#contacto">Contactarme</a>
+                </div>
+                <address class="hero__contact">
+                    <span>La Paz, Bolivia</span>
+                    <a href="mailto:imanaadiel4@gmail.com">imanaadiel4@gmail.com</a>
+                    <a href="tel:+59167167255">+591 67167255</a>
+                </address>
+            </div>
+            <figure class="foto-perfil hero__portrait">
                 <img src="./assets/images/foto.jpg" alt="Fotografía profesional de Adiel Jose Imaña Castillo" width="180" height="180">
-                <figcaption>
-                    Adiel Jose Imaña Castillo
-                </figcaption>
+                <figcaption>Adiel Jose Imaña Castillo</figcaption>
             </figure>
-
-            <hr>
-
-            <p>
-                <strong>Estudiante de Ingeniería de Sistemas</strong>
-                interesado principalmente en el área de programación y tecnología.
-            </p>
-
-            <address>
-                <strong>Ubicación:</strong> La Paz, Bolivia
-                <br>
-                <strong>Correo:</strong>
-                <a href="mailto:imanaadiel4@gmail.com">imanaadiel4@gmail.com</a>
-                <br>
-                <strong>Teléfono:</strong>
-                <a href="tel:+59167167255">+591 67167255</a>
-            </address>
-
         </header>
 
         <!-- =========================================
@@ -77,18 +62,18 @@
              ========================================= -->
         <nav aria-label="Navegación principal">
 
-            <h2>Menú</h2>
+            <h2 class="sr-only">Menú</h2>
 
-            <ul>
-                <li><a href="#perfil">Perfil profesional</a></li>
-                <li><a href="#formacion">Formación académica</a></li>
-                <li><a href="#experiencia">Experiencia y proyectos</a></li>
-                <li><a href="#habilidades">Habilidades técnicas</a></li>
-                <li><a href="#cursos">Cursos y formación adicional</a></li>
-                <li><a href="#idiomas">Idiomas</a></li>
-                <li><a href="#proyectos">Proyectos destacados</a></li>
-                <li><a href="#multimedia">Portafolio multimedia</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+            <button id="btn-menu" class="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span aria-hidden="true">☰</span>
+            </button>
+
+            <ul id="menu-principal">
+                <li><a href="./index.html" aria-current="page">CV principal</a></li>
+                <li><a href="./formacion.html">Formación</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./multimedia.html">Multimedia</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
             </ul>
 
         </nav>
@@ -172,6 +157,12 @@
                 <p>Como estudiante, gran parte de mi experiencia se encuentra relacionada con proyectos desarrollados durante mi formación universitaria.</p>
 
                 <article>
+                    <h3>Ayudantías académicas</h3>
+                    <p><strong>Actualmente:</strong> Ayudante en la materia de Programación 2.</p>
+                    <p><strong>Experiencia previa:</strong> Ayudante en Introducción a la Programación y Álgebra Lineal.</p>
+                </article>
+
+                <article>
                     <h3>Proyecto académico en Python</h3>
                     <p><strong>Rol:</strong> Desarrollador</p>
                     <p><strong>Institución:</strong> Universidad Católica Boliviana</p>
@@ -200,38 +191,182 @@
             </section>
 
             <!-- HABILIDADES -->
-            <section id="habilidades" aria-labelledby="titulo-habilidades">
+            <section id="habilidades" aria-labelledby="titulo-habilidades" data-reveal>
                 <h2 id="titulo-habilidades">Habilidades técnicas</h2>
-                <hr>
-                <div class="habilidades-grid">
-                    <article>
-                        <h3>Lenguajes y tecnologías</h3>
-                        <ul>
-                            <li>Python - <meter min="0" max="10" value="8">8 de 10</meter></li>
-                            <li>C++ - <meter min="0" max="10" value="7">7 de 10</meter></li>
-                            <li>Java - <meter min="0" max="10" value="7">7 de 10</meter></li>
-                            <li>HTML5 - <meter min="0" max="10" value="7">7 de 10</meter></li>
-                            <li>CSS - <meter min="0" max="10" value="5">5 de 10</meter></li>
-                        </ul>
-                    </article>
-
-                    <article>
-                        <h3>Herramientas de desarrollo</h3>
-                        <ul>
-                            <li>Visual Studio Code</li>
-                            <li>CLion</li>
-                            <li>PyCharm</li>
-                        </ul>
-                    </article>
-
-                    <article>
-                        <h3>Habilidades profesionales</h3>
-                        <ul>
-                            <li>Resolución de problemas</li>
-                            <li>Aprendizaje continuo</li>
-                            <li>Trabajo en proyectos académicos</li>
-                        </ul>
-                    </article>
+                <div class="filtro-habilidades" role="group" aria-label="Filtrar habilidades por categoría">
+                    <span class="filtro-label">Explorar por categoría</span>
+                    <button class="filtro-chip" type="button" data-skill-filter="all" aria-pressed="true">Todas</button>
+                    <button class="filtro-chip" type="button" data-skill-filter="languages" aria-pressed="false">Lenguajes</button>
+                    <button class="filtro-chip" type="button" data-skill-filter="web" aria-pressed="false">Desarrollo web</button>
+                    <button class="filtro-chip" type="button" data-skill-filter="databases" aria-pressed="false">Bases de datos</button>
+                    <button class="filtro-chip" type="button" data-skill-filter="tools" aria-pressed="false">Herramientas</button>
+                    <button class="filtro-chip" type="button" data-skill-filter="professional" aria-pressed="false">Profesionales</button>
+                </div>
+                <p id="estado-habilidades" class="sr-only" role="status" aria-live="polite"></p>
+                <div id="lista-habilidades" class="flashcard-grid">
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="languages" data-skill-name="Python" aria-expanded="false" aria-label="Mostrar detalles de Python">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">Py</span><span class="flashcard__title">Python</span>
+                                <span class="flashcard__category">Lenguaje de programación</span>
+                                <meter min="0" max="10" value="8" aria-label="Nivel indicado: 8 de 10">8 de 10</meter>
+                                <span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">Python · 8/10</span>
+                                <span>Conocimiento de programación aplicado en proyectos académicos.</span>
+                                <span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="languages" data-skill-name="C++" aria-expanded="false" aria-label="Mostrar detalles de C++">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">C++</span><span class="flashcard__title">C++</span>
+                                <span class="flashcard__category">Lenguaje de programación</span>
+                                <meter min="0" max="10" value="7" aria-label="Nivel indicado: 7 de 10">7 de 10</meter>
+                                <span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">C++ · 7/10</span>
+                                <span>Fundamentos y estructuras aplicados en trabajos académicos.</span>
+                                <span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="languages" data-skill-name="Java" aria-expanded="false" aria-label="Mostrar detalles de Java">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">J</span><span class="flashcard__title">Java</span>
+                                <span class="flashcard__category">Lenguaje de programación</span>
+                                <meter min="0" max="10" value="7" aria-label="Nivel indicado: 7 de 10">7 de 10</meter>
+                                <span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">Java · 7/10</span>
+                                <span>Conocimientos desarrollados en la formación universitaria.</span>
+                                <span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="web" data-skill-name="HTML5" aria-expanded="false" aria-label="Mostrar detalles de HTML5">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">&lt;/&gt;</span><span class="flashcard__title">HTML5</span>
+                                <span class="flashcard__category">Desarrollo web</span>
+                                <meter min="0" max="10" value="7" aria-label="Nivel indicado: 7 de 10">7 de 10</meter>
+                                <span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">HTML5 · 7/10</span>
+                                <span>Conocimientos de tecnologías web adquiridos en la carrera.</span>
+                                <span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="web" data-skill-name="CSS" aria-expanded="false" aria-label="Mostrar detalles de CSS">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">#</span><span class="flashcard__title">CSS</span>
+                                <span class="flashcard__category">Desarrollo web</span>
+                                <meter min="0" max="10" value="5" aria-label="Nivel indicado: 5 de 10">5 de 10</meter>
+                                <span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">CSS · 5/10</span>
+                                <span>Habilidad web en desarrollo; el nivel conserva la valoración publicada.</span>
+                                <span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="databases" data-skill-name="SQL" aria-expanded="false" aria-label="Mostrar detalles de SQL">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">SQL</span><span class="flashcard__title">SQL</span>
+                                <span class="flashcard__category">Lenguaje para bases de datos</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">SQL</span><span>Lenguaje que incorporas a tus intereses de consulta y análisis de datos.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="databases" data-skill-name="PostgreSQL" aria-expanded="false" aria-label="Mostrar detalles de PostgreSQL">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">PG</span><span class="flashcard__title">PostgreSQL</span>
+                                <span class="flashcard__category">Sistema gestor de bases de datos</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">PostgreSQL</span><span>Sistema de bases de datos que añades a tus intereses de armado y análisis de datos.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="tools" data-skill-name="Visual Studio Code" aria-expanded="false" aria-label="Mostrar detalles de Visual Studio Code">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">VS</span><span class="flashcard__title">Visual Studio Code</span>
+                                <span class="flashcard__category">Herramienta de desarrollo</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">Visual Studio Code</span><span>Editor incluido entre las herramientas de desarrollo utilizadas.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="tools" data-skill-name="CLion" aria-expanded="false" aria-label="Mostrar detalles de CLion">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">CL</span><span class="flashcard__title">CLion</span>
+                                <span class="flashcard__category">Herramienta de desarrollo</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">CLion</span><span>Entorno de desarrollo incluido en las herramientas indicadas en el CV.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="tools" data-skill-name="PyCharm" aria-expanded="false" aria-label="Mostrar detalles de PyCharm">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">Py</span><span class="flashcard__title">PyCharm</span>
+                                <span class="flashcard__category">Herramienta de desarrollo</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">PyCharm</span><span>Entorno de desarrollo incluido en las herramientas indicadas en el CV.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="professional" data-skill-name="Resolución de problemas" aria-expanded="false" aria-label="Mostrar detalles de Resolución de problemas">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">&gt;_</span><span class="flashcard__title">Resolución de problemas</span>
+                                <span class="flashcard__category">Habilidad profesional</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">Resolver con método</span><span>Fortaleza profesional consignada en el CV.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="professional" data-skill-name="Aprendizaje continuo" aria-expanded="false" aria-label="Mostrar detalles de Aprendizaje continuo">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">↗</span><span class="flashcard__title">Aprendizaje continuo</span>
+                                <span class="flashcard__category">Habilidad profesional</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">Aprendizaje continuo</span><span>Interés por seguir aprendiendo durante la formación universitaria.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="flashcard" type="button" data-flashcard data-skill-card data-category="professional" data-skill-name="Trabajo en proyectos académicos" aria-expanded="false" aria-label="Mostrar detalles de Trabajo en proyectos académicos">
+                        <span class="flashcard__inner">
+                            <span class="flashcard__face flashcard__front" aria-hidden="false">
+                                <span class="flashcard__icon" aria-hidden="true">{ }</span><span class="flashcard__title">Proyectos académicos</span>
+                                <span class="flashcard__category">Habilidad profesional</span><span class="flashcard__hint">Activar para ver detalles</span>
+                            </span>
+                            <span class="flashcard__face flashcard__back" aria-hidden="true" inert>
+                                <span class="flashcard__title">Trabajo académico</span><span>Experiencia y proyectos descritos como parte de la formación universitaria.</span><span class="flashcard__hint">Activar para volver</span>
+                            </span>
+                        </span>
+                    </button>
                 </div>
             </section>
 
@@ -288,23 +423,54 @@
             <section id="proyectos" aria-labelledby="titulo-proyectos">
                 <h2 id="titulo-proyectos">Proyectos destacados</h2>
                 <hr>
-                <div class="proyectos-grid">
-                    <article>
+                <div class="filtro-proyectos">
+                    <label for="buscar-proyectos">Buscar en proyectos</label>
+                    <input id="buscar-proyectos" type="search" autocomplete="off" aria-controls="lista-proyectos">
+                    <button class="filtro-chip" type="button" data-project-filter="all" aria-pressed="true">Todas</button>
+                    <button class="filtro-chip" type="button" data-project-filter="python" aria-pressed="false">Python</button>
+                    <button class="filtro-chip" type="button" data-project-filter="tkinter" aria-pressed="false">Tkinter</button>
+                    <button class="filtro-chip" type="button" data-project-filter="cpp" aria-pressed="false">C++</button>
+                    <button class="filtro-chip" type="button" data-project-filter="java" aria-pressed="false">Java</button>
+                    <button class="filtro-chip" type="button" data-project-filter="html" aria-pressed="false">HTML</button>
+                    <p id="estado-filtro" role="status" aria-live="polite"></p>
+                </div>
+                <div id="lista-proyectos" class="proyectos-grid">
+                    <article class="project-card" data-project-card data-technologies="python tkinter" data-reveal>
                         <h3>Sorteo Equitativo</h3>
                         <p>Proyecto académico desarrollado para realizar sorteos organizados de equipos y grupos.</p>
                         <p><strong>Tecnologías utilizadas:</strong> Python y Tkinter.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>Python</span><span>Tkinter</span></div>
                         <p><strong>Rol:</strong> Desarrollador.</p>
                         <p><strong>Resultado:</strong> Desarrollo de una aplicación con interfaz gráfica capaz de organizar equipos y realizar sorteos.</p>
-                        <p><strong>Repositorio:</strong> <a href="#">Disponible próximamente</a></p>
+                        <p><strong>Repositorio:</strong> Disponible próximamente</p>
                     </article>
 
-                    <article>
+                    <article class="project-card" data-project-card data-technologies="cpp" data-reveal>
                         <h3>Proyecto académico de programación</h3>
                         <p>Desarrollo de un proyecto académico utilizando conceptos de programación y estructuras fundamentales.</p>
                         <p><strong>Tecnologías utilizadas:</strong> C++.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>C++</span></div>
                         <p><strong>Rol:</strong> Desarrollador.</p>
                         <p><strong>Resultado:</strong> Aplicación de los conocimientos adquiridos durante la formación universitaria.</p>
-                        <p><strong>Repositorio:</strong> <a href="#">Disponible próximamente</a></p>
+                        <p><strong>Repositorio:</strong> Disponible próximamente</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="cpp" data-reveal>
+                        <h3>Videojuego de Terrifier</h3>
+                        <p>Videojuego de Terrifier desarrollado con C++.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>C++</span></div>
+                        <p><strong>Repositorio:</strong> Disponible próximamente</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="java" data-reveal>
+                        <h3>Aplicación del Mundial 2026</h3>
+                        <p>Aplicación Java que muestra datos del Mundial 2026.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>Java</span></div>
+                        <p><strong>Repositorio:</strong> Disponible próximamente</p>
+                    </article>
+                    <article class="project-card" data-project-card data-technologies="html" data-reveal>
+                        <h3>Sorteador del Mundial</h3>
+                        <p>Sorteador del Mundial desarrollado con HTML.</p>
+                        <div class="project-card__tags" aria-label="Tecnologías"><span>HTML</span></div>
+                        <p><strong>Repositorio:</strong> Disponible próximamente</p>
                     </article>
                 </div>
 
@@ -315,6 +481,14 @@
                         <p>Me interesa continuar desarrollando proyectos relacionados con programación, tecnología, automatización y soluciones que puedan ayudar a las personas.</p>
                     </details>
                 </aside>
+            </section>
+
+            <!-- PERFIL Y REPOSITORIOS DE GITHUB -->
+            <section id="github" aria-labelledby="titulo-github">
+                <h2 id="titulo-github">Actividad pública en GitHub</h2>
+                <p id="estado-github" role="status" aria-live="polite">Preparando consulta a GitHub...</p>
+                <div id="datos-github"></div>
+                <button id="reintentar-github" type="button" hidden>Reintentar consulta</button>
             </section>
 
             <!-- MULTIMEDIA -->
@@ -365,57 +539,57 @@
             <section id="contacto" aria-labelledby="titulo-contacto">
                 <h2 id="titulo-contacto">Contacto</h2>
                 <hr>
-                <p id="descripcion-formulario">Si deseas comunicarte conmigo, puedes utilizar el siguiente formulario.</p>
+                <p id="descripcion-formulario">Puedes enviar una consulta mediante EmailJS. El destinatario se define en la plantilla y el correo indicado se usa como Reply-To.</p>
 
                 <!-- Mensaje global del formulario -->
-                <div id="mensaje-formulario" class="mensaje-respuesta" style="display: none;"></div>
+                <div id="mensaje-formulario" class="mensaje-respuesta" role="status" aria-live="polite" hidden></div>
 
-                <form id="form-contacto" action="#" method="post" aria-describedby="descripcion-formulario" novalidate>
+                <form id="form-contacto" action="#" method="post" aria-describedby="descripcion-formulario">
                     <fieldset>
                         <legend>Formulario de contacto</legend>
 
                         <p>
                             <label for="nombre">Nombre completo:</label><br>
-                            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre" minlength="3" maxlength="80" required>
-                            <span class="error-mensaje" id="error-nombre"></span>
+                            <input type="text" id="nombre" name="user_name" autocomplete="name" placeholder="Escribe tu nombre" minlength="3" maxlength="80" aria-describedby="error-nombre" aria-invalid="false" required>
+                            <span class="error-mensaje" id="error-nombre" aria-live="polite"></span>
                         </p>
 
                         <p>
                             <label for="correo">Correo electrónico:</label><br>
-                            <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" maxlength="100" required>
-                            <span class="error-mensaje" id="error-correo"></span>
+                               <input type="email" id="correo" name="user_email" autocomplete="email" placeholder="correo@ejemplo.com" maxlength="100" aria-describedby="error-correo" aria-invalid="false" required>
+                            <span class="error-mensaje" id="error-correo" aria-live="polite"></span>
                         </p>
 
                         <p>
                             <label for="telefono">Teléfono:</label><br>
-                            <input type="tel" id="telefono" name="telefono" placeholder="+591 70000000" aria-describedby="ayuda-telefono" required><br>
+                            <input type="tel" id="telefono" name="phone" autocomplete="tel" placeholder="+591 70000000" pattern="[+]?[0-9 ]{7,20}" aria-describedby="ayuda-telefono error-telefono" aria-invalid="false" required><br>
                             <small id="ayuda-telefono">Introduce un número de teléfono válido (+591 ...)</small>
-                            <span class="error-mensaje" id="error-telefono"></span>
+                            <span class="error-mensaje" id="error-telefono" aria-live="polite"></span>
                         </p>
 
                         <p>
                             <label for="motivo">Motivo de contacto:</label><br>
-                            <select id="motivo" name="motivo" required>
+                            <select id="motivo" name="contact_reason" aria-describedby="error-motivo" aria-invalid="false" required>
                                 <option value="">Selecciona una opción</option>
                                 <option value="proyecto">Proyecto</option>
                                 <option value="academico">Consulta académica</option>
                                 <option value="laboral">Oportunidad laboral</option>
                                 <option value="otro">Otro</option>
                             </select>
-                            <span class="error-mensaje" id="error-motivo"></span>
+                            <span class="error-mensaje" id="error-motivo" aria-live="polite"></span>
                         </p>
 
                         <p>
                             <label for="mensaje">Mensaje:</label><br>
-                            <textarea id="mensaje" name="mensaje" rows="8" cols="50" minlength="10" maxlength="1000" placeholder="Escribe tu mensaje..." required></textarea>
-                            <span class="error-mensaje" id="error-mensaje"></span>
+                            <textarea id="mensaje" name="message" rows="8" cols="50" minlength="10" maxlength="1000" placeholder="Escribe tu mensaje..." aria-describedby="error-mensaje" aria-invalid="false" required></textarea>
+                            <span class="error-mensaje" id="error-mensaje" aria-live="polite"></span>
                         </p>
 
                         <p class="checkbox-aceptacion">
-                            <input type="checkbox" id="aceptacion" name="aceptacion" required>
-                            <label for="aceptacion">Acepto que la información proporcionada sea utilizada para responder a mi consulta.</label>
+                               <input type="checkbox" id="aceptacion" name="privacy_consent" value="accepted" aria-describedby="error-aceptacion" aria-invalid="false" required>
+                            <label for="aceptacion">Acepto que EmailJS procese estos datos para enviar y responder a mi consulta.</label>
                         </p>
-                        <span class="error-mensaje" id="error-aceptacion"></span>
+                        <span class="error-mensaje" id="error-aceptacion" aria-live="polite"></span>
 
                         <p class="botones-formulario">
                             <button type="submit">Enviar formulario</button>
@@ -440,8 +614,17 @@
 
     </div>
 
-    <!-- SCRIPT JS -->
-    <script src="./js/script.js"></script>
+    <!-- La configuración pública del proveedor se carga antes de las interacciones. -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+    <script src="./js/email-config.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/flashcards.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

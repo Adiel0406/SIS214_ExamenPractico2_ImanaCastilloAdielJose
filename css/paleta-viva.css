@@ -1,0 +1,102 @@
+/* Tokens compartidos: la clase modo-oscuro cambia todas las superficies. */
+:root {
+    --color-navy: #0B1020;
+    --color-night: #111827;
+    --color-electric: #2563EB;
+    --color-violet: #A78BFA;
+    --color-cyan: #22D3EE;
+    --color-light: #F9FAFB;
+    --color-ink: #172033;
+    --color-muted: #64748B;
+    --color-border: #E2E8F0;
+
+    --font-family-display: 'Segoe UI', system-ui, sans-serif;
+    --font-family-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+    --space-1: 0.375rem;
+    --space-2: 0.625rem;
+    --space-3: 1rem;
+    --space-4: 1.5rem;
+    --space-5: 2.5rem;
+    --space-6: 4rem;
+    --radius-sm: 0.625rem;
+    --radius-md: 1rem;
+    --radius-lg: 1.5rem;
+    --radius-pill: 999px;
+    --shadow-soft: 0 12px 36px rgba(23, 32, 51, 0.09);
+    --shadow-lift: 0 20px 45px rgba(37, 99, 235, 0.16);
+    --depth-nav: 20;
+    --depth-progress: 30;
+    --depth-overlay: 40;
+    --transition-fast: 160ms ease;
+    --transition-base: 280ms ease;
+    --transition-slow: 520ms cubic-bezier(0.2, 0.7, 0.2, 1);
+
+    --cv-background: var(--color-light);
+    --cv-surface: #ffffff;
+    --cv-surface-raised: #ffffff;
+    --cv-text: var(--color-ink);
+    --cv-muted: var(--color-muted);
+    --cv-border: var(--color-border);
+    --cv-accent: #1D4ED8;
+    --cv-accent-strong: #1E40AF;
+    --cv-accent-soft: #DBEAFE;
+    --cv-highlight: #6D28D9;
+    --cv-highlight-soft: #F3E8FF;
+    --cv-cyan: #0891B2;
+    --cv-focus: var(--color-electric);
+
+    /* Alias para que la hoja base y sus formularios mantengan sus selectores. */
+    --fondo: var(--cv-background);
+    --superficie: var(--cv-surface);
+    --superficie-secundaria: var(--cv-surface-raised);
+    --texto: var(--cv-text);
+    --texto-secundario: var(--cv-muted);
+    --principal: var(--cv-accent);
+    --principal-hover: var(--cv-accent-strong);
+    --secondary-color: var(--color-violet);
+    --borde: var(--cv-border);
+    --sombra: var(--shadow-soft);
+}
+
+body.modo-oscuro {
+    color-scheme: dark;
+    --cv-background: var(--color-navy);
+    --cv-surface: var(--color-night);
+    --cv-surface-raised: #182235;
+    --cv-text: #F1F5F9;
+    --cv-muted: #A7B2C5;
+    --cv-border: #26354C;
+    --cv-accent: #60A5FA;
+    --cv-accent-strong: var(--color-cyan);
+    --cv-accent-soft: rgba(37, 99, 235, 0.2);
+    --cv-highlight: #C4B5FD;
+    --cv-highlight-soft: rgba(167, 139, 250, 0.16);
+    --cv-cyan: var(--color-cyan);
+    --cv-focus: var(--color-cyan);
+    --shadow-soft: 0 16px 42px rgba(0, 0, 0, 0.24);
+    --shadow-lift: 0 20px 48px rgba(34, 211, 238, 0.12);
+}
+
+html { color-scheme: light; }
+
+body {
+    background-color: var(--cv-background);
+    background-image:
+        radial-gradient(ellipse at 8% 4%, rgba(37, 99, 235, 0.07), transparent 32rem),
+        radial-gradient(ellipse at 92% 18%, rgba(167, 139, 250, 0.08), transparent 28rem);
+    color: var(--cv-text);
+    font-family: var(--font-family-display);
+    transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+body.modo-oscuro {
+    background-image:
+        radial-gradient(ellipse at 8% 4%, rgba(37, 99, 235, 0.18), transparent 32rem),
+        radial-gradient(ellipse at 92% 18%, rgba(167, 139, 250, 0.12), transparent 28rem);
+}
+
+.contenedor-pagina {
+    max-width: 1480px;
+    margin-inline: auto;
+    background-color: transparent;
+}

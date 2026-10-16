@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recursos de imagen, audio y video del portafolio de Adiel Jose Imaña Castillo.">
+    <title>Multimedia | Adiel Jose Imaña Castillo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/paleta-viva.css">
+    <link rel="stylesheet" href="./css/componentes-vivos.css">
+    <link rel="stylesheet" href="./css/movimiento.css">
+</head>
+<body>
+    <div class="contenedor-pagina">
+        <!-- Enlace de salto accesible para evitar recorrer todos los elementos del menú. -->
+        <a href="#main-content" class="saltar-contenido">Saltar al contenido principal</a>
+        <button id="btn-modo" class="boton-modo" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+            <span id="texto-modo">Modo oscuro</span>
+        </button>
+
+        <!-- Encabezado compartido; el contenido multimedia se organiza en el main. -->
+        <header id="inicio">
+            <h1>Portafolio multimedia</h1>
+            <p class="subtitulo">Adiel Jose Imaña Castillo</p>
+            <p><small>Proyectos y presentación profesional</small></p>
+        </header>
+
+        <nav aria-label="Navegación principal">
+            <h2 class="sr-only">Menú</h2>
+            <button id="btn-menu" class="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span aria-hidden="true">☰</span>
+            </button>
+            <ul id="menu-principal">
+                <li><a href="./index.html">CV principal</a></li>
+                <li><a href="./formacion.html">Formación</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./multimedia.html" aria-current="page">Multimedia</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section id="multimedia" aria-labelledby="titulo-multimedia">
+                <h2 id="titulo-multimedia">Recursos multimedia</h2>
+                <!-- La imagen conserva proporciones y ofrece texto alternativo descriptivo. -->
+                <article>
+                    <h3>Proyecto destacado</h3>
+                    <figure>
+                        <picture>
+                            <source media="(min-width: 1000px)" srcset="./assets/images/proyecto.jpg">
+                            <img src="./assets/images/proyecto.jpg" alt="Captura de pantalla de uno de los proyectos académicos desarrollados" width="500">
+                        </picture>
+                        <figcaption>Captura de un proyecto académico desarrollado durante la formación universitaria.</figcaption>
+                    </figure>
+                </article>
+                <!-- Los controles nativos conservan accesibilidad por teclado y soporte del navegador. -->
+                <article>
+                    <h3>Presentación profesional</h3>
+                    <p>Presentación multimedia relacionada con mi formación y perfil profesional.</p>
+                    <audio controls aria-label="Audio de presentación profesional">
+                        <source src="./assets/audio/presentacion.mp3" type="audio/mpeg">
+                        Tu navegador no permite reproducir este archivo de audio.
+                    </audio>
+                </article>
+                <article>
+                    <h3>Video de proyecto</h3>
+                    <video controls width="600" aria-label="Video relacionado con un proyecto académico">
+                        <source src="./assets/video/proyecto.mp4" type="video/mp4">
+                        Tu navegador no permite reproducir este video.
+                    </video>
+                </article>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Adiel Jose Imaña Castillo</strong></p>
+            <p><a href="./index.html#inicio">Volver al CV principal</a></p>
+        </footer>
+    </div>
+    <script src="./js/theme.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/flashcards.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

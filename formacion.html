@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formación académica, experiencia y habilidades de Adiel Jose Imaña Castillo.">
+    <title>Formación | Adiel Jose Imaña Castillo</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/paleta-viva.css">
+    <link rel="stylesheet" href="./css/componentes-vivos.css">
+    <link rel="stylesheet" href="./css/movimiento.css">
+</head>
+<body>
+    <div class="contenedor-pagina">
+        <!-- Enlace de salto para llegar al contenido principal sin recorrer el menú. -->
+        <a href="#main-content" class="saltar-contenido">Saltar al contenido principal</a>
+        <button id="btn-modo" class="boton-modo" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+            <span id="texto-modo">Modo oscuro</span>
+        </button>
+
+        <!-- Encabezado común con el título específico de esta vista. -->
+        <header id="inicio">
+            <h1>Formación y experiencia</h1>
+            <p class="subtitulo">Adiel Jose Imaña Castillo</p>
+            <p><small>Ingeniería de Sistemas | Universidad Católica Boliviana, La Paz</small></p>
+        </header>
+
+        <!-- Los enlaces son rutas relativas para funcionar también en GitHub Pages. -->
+        <nav aria-label="Navegación principal">
+            <h2 class="sr-only">Menú</h2>
+            <button id="btn-menu" class="boton-menu" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span aria-hidden="true">☰</span>
+            </button>
+            <ul id="menu-principal">
+                <li><a href="./index.html">CV principal</a></li>
+                <li><a href="./formacion.html" aria-current="page">Formación</a></li>
+                <li><a href="./proyectos.html">Proyectos</a></li>
+                <li><a href="./multimedia.html">Multimedia</a></li>
+                <li><a href="./contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <section id="formacion" aria-labelledby="titulo-formacion">
+                <h2 id="titulo-formacion">Formación académica</h2>
+                <article>
+                    <h3>Ingeniería de Sistemas</h3>
+                    <p><strong>Universidad Católica Boliviana</strong></p>
+                    <p><time datetime="2025">2025</time> - <time datetime="2029">2029</time></p>
+                    <p>Estado: <mark>En curso</mark></p>
+                    <p>Grado obtenido: <strong>Sin grado todavía</strong></p>
+                </article>
+            </section>
+
+            <section id="experiencia" aria-labelledby="titulo-experiencia">
+                <h2 id="titulo-experiencia">Experiencia profesional y académica</h2>
+                <p>Como estudiante, gran parte de mi experiencia se relaciona con proyectos desarrollados durante mi formación universitaria.</p>
+                <article>
+                    <h3>Ayudantías académicas</h3>
+                    <p><strong>Actualmente:</strong> Ayudante en la materia de Programación 2.</p>
+                    <p><strong>Experiencia previa:</strong> Ayudante en Introducción a la Programación y Álgebra Lineal.</p>
+                </article>
+                <article>
+                    <h3>Proyecto académico en Python</h3>
+                    <p><strong>Rol:</strong> Desarrollador</p>
+                    <p><strong>Institución:</strong> Universidad Católica Boliviana</p>
+                    <p><strong>Periodo:</strong> <time datetime="2025">2025</time> - <time datetime="2026">2026</time></p>
+                    <p>Proyecto académico que aplica conceptos de programación y resolución de problemas.</p>
+                    <p><strong>Logro:</strong> Desarrollo como parte de la formación universitaria.</p>
+                </article>
+                <article>
+                    <h3>Proyecto académico en C++</h3>
+                    <p><strong>Rol:</strong> Desarrollador</p>
+                    <p><strong>Institución:</strong> Universidad Católica Boliviana</p>
+                    <p><strong>Periodo:</strong> <time datetime="2025">2025</time> - <time datetime="2026">2026</time></p>
+                    <p>Proyecto académico que aplica fundamentos de programación y estructuras de código.</p>
+                    <p><strong>Logro:</strong> Aplicación de conocimientos de programación.</p>
+                </article>
+                <article>
+                    <h3>Proyecto académico en Java</h3>
+                    <p><strong>Rol:</strong> Desarrollador</p>
+                    <p><strong>Institución:</strong> Universidad Católica Boliviana</p>
+                    <p><strong>Periodo:</strong> <time datetime="2025">2025</time> - <time datetime="2026">2026</time></p>
+                    <p>Proyecto desarrollado con conocimientos adquiridos durante la carrera.</p>
+                    <p><strong>Logro:</strong> Desarrollo de una solución funcional para una actividad académica.</p>
+                </article>
+            </section>
+
+            <section id="habilidades" aria-labelledby="titulo-habilidades">
+                <h2 id="titulo-habilidades">Habilidades técnicas</h2>
+                <div class="habilidades-grid">
+                    <article>
+                        <h3>Lenguajes y tecnologías</h3>
+                        <ul>
+                            <li>Python - <meter min="0" max="10" value="8">8 de 10</meter></li>
+                            <li>C++ - <meter min="0" max="10" value="7">7 de 10</meter></li>
+                            <li>Java - <meter min="0" max="10" value="7">7 de 10</meter></li>
+                            <li>HTML5 - <meter min="0" max="10" value="7">7 de 10</meter></li>
+                            <li>CSS - <meter min="0" max="10" value="5">5 de 10</meter></li>
+                        </ul>
+                    </article>
+                    <article>
+                        <h3>Herramientas de desarrollo</h3>
+                        <ul><li>Visual Studio Code</li><li>CLion</li><li>PyCharm</li></ul>
+                    </article>
+                    <article>
+                        <h3>Habilidades profesionales</h3>
+                        <ul><li>Resolución de problemas</li><li>Aprendizaje continuo</li><li>Trabajo en proyectos académicos</li></ul>
+                    </article>
+                </div>
+                <article>
+                    <h3>Bases de datos e intereses</h3>
+                    <ul>
+                        <li>SQL - lenguaje de bases de datos que incorporas a tus habilidades.</li>
+                        <li>PostgreSQL - sistema gestor de bases de datos que incorporas a tus herramientas.</li>
+                    </ul>
+                    <p>Te interesa el desarrollo de software y el armado y análisis de datos con bases de datos.</p>
+                </article>
+            </section>
+
+            <section id="cursos" aria-labelledby="titulo-cursos">
+                <h2 id="titulo-cursos">Cursos y formación adicional</h2>
+                <article>
+                    <h3>Formación complementaria</h3>
+                    <ul>
+                        <li><strong>Programación en Python</strong> - Formación académica universitaria</li>
+                        <li><strong>Programación en C++</strong> - Formación académica universitaria</li>
+                        <li><strong>Programación en Java</strong> - Formación académica universitaria</li>
+                        <li><strong>Desarrollo web con HTML5</strong> - Formación académica</li>
+                    </ul>
+                    <p>La formación complementaria continúa en desarrollo como parte de mi preparación profesional.</p>
+                </article>
+            </section>
+
+            <section id="idiomas" aria-labelledby="titulo-idiomas">
+                <h2 id="titulo-idiomas">Idiomas</h2>
+                <div class="tabla-responsive">
+                    <table>
+                        <caption>Nivel de dominio de idiomas</caption>
+                        <thead><tr><th scope="col">Idioma</th><th scope="col">Lectura</th><th scope="col">Escritura</th><th scope="col">Conversación</th></tr></thead>
+                        <tbody>
+                            <tr><th scope="row">Español</th><td>Avanzado</td><td>Avanzado</td><td>Nativo</td></tr>
+                            <tr><th scope="row">Inglés</th><td>Intermedio</td><td>Intermedio</td><td>Básico</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p><strong>Adiel Jose Imaña Castillo</strong></p>
+            <p><a href="./index.html#inicio">Volver al CV principal</a></p>
+        </footer>
+    </div>
+    <script src="./js/theme.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/flashcards.js"></script>
+    <script src="./js/filters.js"></script>
+    <script src="./js/animations.js"></script>
+    <script src="./js/contact.js"></script>
+    <script src="./js/api.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
