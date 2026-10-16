@@ -6,8 +6,8 @@ Portafolio profesional de Adiel Jose Imaña Castillo, estudiante de Ingeniería 
 
 ## 🚀 Enlaces del Proyecto
 
-* **Sitio publicado:** pendiente de configurar en GitHub Pages.
-* **Repositorio:** https://github.com/Adiel0406/hoja_de_vida_adiel_jose_imana_castilo
+* **Sitio publicado:** https://adiel0406.github.io/SIS214_ExamenPractico2_ImanaCastilloAdielJose/
+* **Repositorio:** https://github.com/Adiel0406/SIS214_ExamenPractico2_ImanaCastilloAdielJose.git
 
 ---
 
